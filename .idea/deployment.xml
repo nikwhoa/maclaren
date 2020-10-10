@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="MacLaren" autoUploadExternalChanges="true">
+    <serverData>
+      <paths name="Cultbags">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="MacLaren">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/!info.txt" />
+            <excludedPath local="true" path="$PROJECT_DIR$/etc.clientlibs" />
+            <excludedPath local="true" path="$PROJECT_DIR$/gb-en" />
+            <excludedPath local="true" path="$PROJECT_DIR$/index.html" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="local server">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>
