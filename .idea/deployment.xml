@@ -19,6 +19,7 @@
             <excludedPath local="true" path="$PROJECT_DIR$/etc.clientlibs" />
             <excludedPath local="true" path="$PROJECT_DIR$/gb-en" />
             <excludedPath local="true" path="$PROJECT_DIR$/index.html" />
+            <excludedPath local="true" path="$PROJECT_DIR$/sources" />
           </excludedPaths>
         </serverdata>
       </paths>

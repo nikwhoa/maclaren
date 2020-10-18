@@ -197,7 +197,7 @@ summary {
     font-weight: normal;
     font-style: normal;
 }
-
+/*
 @font-face {
     font-family: mclaren-bespoke;
     src: url(clientlib-site/resources/asset/font/mclaren-bespoke-light.6555357.woff2) format("woff2"), url(clientlib-site/resources/asset/font/mclaren-bespoke-light.64ceda7.woff) format("woff");
@@ -295,6 +295,7 @@ summary {
     font-weight: 700;
     font-style: normal
 }
+*/
 
 *, :after, :before {
     -webkit-box-sizing: border-box;
