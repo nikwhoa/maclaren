@@ -12,48 +12,158 @@
         <div class="redirect-tile-wrapper">
 
 			<?php
-            global $post;
+			global $post;
 
-			$slider_posts = array(
-				'post_type' => 'mclaren_posts',
-				'order'     => 'ASC',
-				'meta_query' => array(
+			$slider_posts   = array(
+				'post_type'   => 'mclaren_posts',
+				'order'       => 'ASC',
+				'numberposts' => 2,
+				'meta_query'  => array(
 					array(
-						'key'     => 'my_meta_key',
-						'value'   => '1',
+						'key'   => 'my_meta_key',
+						'value' => '1',
 					)
 				)
 			);
-			$number       = 0;
-			$custom_query = new WP_Query( $slider_posts );
-				if ( $custom_query->have_posts() ) : while ($number < 2) : $number++; $custom_query->the_post(); ?>
-<!--                    --><?php //foreach ( $slider_posts as $post )  :  setup_postdata( $post );  ?>
-                        <a href="<?php the_permalink(); ?>" class="redirect-tile" target="_self">
-                            <div class="background-wrapper">
-                                <picture class="responsive-image " data-component="responsive-image">
-                                    <source media="(max-width: 767px)" class="js-small-image"
-                                            srcset="<?php the_post_thumbnail_url(); ?>">
-                                    <img src="<?php the_post_thumbnail_url(); ?>"
-                                         alt="McLaren Experiences" class="js-normal-image fit-cover ">
-                                </picture>
-                            </div>
-                            <div class="redirect-tile-content">
-                                <h3 class="heading-03"><?php the_field( 'title_for_the_main_page' ) ?></h3>
-                                <div class="cta">
+			$slider_posts_2 = array(
+				'post_type'   => 'mclaren_posts',
+				'order'       => 'ASC',
+				'numberposts' => 2,
+				'meta_query'  => array(
+					array(
+						'key'   => 'my_meta_key',
+						'value' => '2',
+					)
+				)
+			);
+			$slider_posts_3 = array(
+				'post_type'   => 'mclaren_posts',
+				'order'       => 'ASC',
+				'numberposts' => 2,
+				'meta_query'  => array(
+					array(
+						'key'   => 'my_meta_key',
+						'value' => '3',
+					)
+				)
+			);
+
+			$custom_query   = new WP_Query( $slider_posts );
+			$custom_query_2 = new WP_Query( $slider_posts_2 );
+			$custom_query_3 = new WP_Query( $slider_posts_3 );
+			if ( $slider_posts ) :
+				if ( $custom_query->have_posts() ) : while ( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
+                    <!--                    --><?php //foreach ( $slider_posts as $post )  :  setup_postdata( $post );  ?>
+                    <a href="<?php the_permalink(); ?>" class="redirect-tile" target="_self">
+                        <div class="background-wrapper">
+                            <picture class="responsive-image " data-component="responsive-image">
+                                <source media="(max-width: 767px)" class="js-small-image"
+                                        srcset="<?php the_post_thumbnail_url(); ?>">
+                                <img src="<?php the_post_thumbnail_url(); ?>"
+                                     alt="McLaren Experiences" class="js-normal-image fit-cover ">
+                            </picture>
+                        </div>
+                        <div class="redirect-tile-content">
+                            <h3 class="heading-03"><?php the_field( 'title_for_the_main_page' ) ?></h3>
+                            <div class="cta">
 						<span class="icon  chevron-right" data-component="icon"
                               data-icon="chevron-right"><svg xmlns="http://www.w3.org/2000/svg"
                                                              viewBox="0 0 316.3 632.4"><path
                                         d="M15.6 542.3Q35 522.8 210.5 347.4v-63.2Q35 108.9 15.6 89.3a52.6 52.6 0 0 1 0-73.7 52.6 52.6 0 0 1 73.7 0l226.5 226.5v147.4L89.3 616a47 47 0 0 1-36.9 15.8A46.9 46.9 0 0 1 15.6 616a52.6 52.6 0 0 1 0-73.7z"></path></svg></span>
-                                    Узнать
-                                </div>
+                                Узнать
                             </div>
-                        </a>
-					<?php
+                        </div>
+                    </a>
+				<?php
 
-                endwhile;
-			 ?>
+				endwhile;
+					?>
 
 				<?php endif; ?>
+			<?php endif;?>
+        </div>
+    </section>
+</div>
+<div class="cmp cmp-t081-redirect-tile aem-GridColumn aem-GridColumn--default--12">
+    <section data-scroll-component=""
+             class="t081-redirect-tile spacing--3 z-index-0 "
+             data-id="t081_redirect_tile-1416783995">
+        <div class="redirect-tile-wrapper">
+			<?php
+			if ( $slider_posts_2 ) :
+				if ( $custom_query_2->have_posts() ) : while ( $custom_query_2->have_posts() ) : $custom_query_2->the_post(); ?>
+                    <!--                    --><?php //foreach ( $slider_posts as $post )  :  setup_postdata( $post );  ?>
+                    <a href="<?php the_permalink(); ?>" class="redirect-tile" target="_self">
+                        <div class="background-wrapper">
+                            <picture class="responsive-image " data-component="responsive-image">
+                                <source media="(max-width: 767px)" class="js-small-image"
+                                        srcset="<?php the_post_thumbnail_url(); ?>">
+                                <img src="<?php the_post_thumbnail_url(); ?>"
+                                     alt="McLaren Experiences" class="js-normal-image fit-cover ">
+                            </picture>
+                        </div>
+                        <div class="redirect-tile-content">
+                            <h3 class="heading-03"><?php the_field( 'title_for_the_main_page' ) ?></h3>
+                            <div class="cta">
+						<span class="icon  chevron-right" data-component="icon"
+                              data-icon="chevron-right"><svg xmlns="http://www.w3.org/2000/svg"
+                                                             viewBox="0 0 316.3 632.4"><path
+                                        d="M15.6 542.3Q35 522.8 210.5 347.4v-63.2Q35 108.9 15.6 89.3a52.6 52.6 0 0 1 0-73.7 52.6 52.6 0 0 1 73.7 0l226.5 226.5v147.4L89.3 616a47 47 0 0 1-36.9 15.8A46.9 46.9 0 0 1 15.6 616a52.6 52.6 0 0 1 0-73.7z"></path></svg></span>
+                                Узнать
+                            </div>
+                        </div>
+                    </a>
+				<?php
+
+				endwhile;
+					?>
+        </div>
+    </section>
+</div>
+				<?php endif; ?>
+			<?php endif; ?>
+            <div class="cmp cmp-t081-redirect-tile aem-GridColumn aem-GridColumn--default--12">
+                <section data-scroll-component=""
+                         class="t081-redirect-tile spacing--3 z-index-0 "
+                         data-id="t081_redirect_tile-1416783995">
+                    <div class="redirect-tile-wrapper">
+				        <?php
+				        if ( $slider_posts_3 ) :
+					        if ( $custom_query_3->have_posts() ) : while ( $custom_query_3->have_posts() ) : $custom_query_3->the_post(); ?>
+                                <!--                    --><?php //foreach ( $slider_posts as $post )  :  setup_postdata( $post );  ?>
+                                <a href="<?php the_permalink(); ?>" class="redirect-tile" target="_self">
+                                    <div class="background-wrapper">
+                                        <picture class="responsive-image " data-component="responsive-image">
+                                            <source media="(max-width: 767px)" class="js-small-image"
+                                                    srcset="<?php the_post_thumbnail_url(); ?>">
+                                            <img src="<?php the_post_thumbnail_url(); ?>"
+                                                 alt="McLaren Experiences" class="js-normal-image fit-cover ">
+                                        </picture>
+                                    </div>
+                                    <div class="redirect-tile-content">
+                                        <h3 class="heading-03"><?php the_field( 'title_for_the_main_page' ) ?></h3>
+                                        <div class="cta">
+						<span class="icon  chevron-right" data-component="icon"
+                              data-icon="chevron-right"><svg xmlns="http://www.w3.org/2000/svg"
+                                                             viewBox="0 0 316.3 632.4"><path
+                                        d="M15.6 542.3Q35 522.8 210.5 347.4v-63.2Q35 108.9 15.6 89.3a52.6 52.6 0 0 1 0-73.7 52.6 52.6 0 0 1 73.7 0l226.5 226.5v147.4L89.3 616a47 47 0 0 1-36.9 15.8A46.9 46.9 0 0 1 15.6 616a52.6 52.6 0 0 1 0-73.7z"></path></svg></span>
+                                            Узнать
+                                        </div>
+                                    </div>
+                                </a>
+					        <?php
+
+					        endwhile;
+						        ?>
+
+					        <?php endif; ?>
+				        <?php endif; ?>
+
+
+                    </div>
+                </section>
+            </div>
+
         </div>
     </section>
 </div>
