@@ -76,7 +76,7 @@
                     </a>
 				<?php
 
-				endwhile;
+				endwhile; 
 					?>
 
 				<?php endif; ?>
