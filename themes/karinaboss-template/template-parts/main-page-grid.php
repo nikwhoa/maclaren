@@ -9,6 +9,7 @@
 
 /* set up for the first grid on the main page */
 
+
 $grid_post = array(
 	'post_type' => 'mclaren_posts',
 	'order'     => 'ASC',
