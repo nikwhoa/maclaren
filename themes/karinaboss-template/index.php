@@ -124,6 +124,33 @@ get_header();
 
                 </div>
             </div>
+	        <?php get_template_part('template-parts/main-page-latest-news') ?>
+
+            <div class="cmp cmp-s010-register-interest aem-GridColumn aem-GridColumn--default--12">
+                <section data-component="s010-register-interest-prospect" data-id="s010_register_intere-1614289270" data-car-model="" class="s010-register-interest-prospect spacing-default " data-scroll-component="">
+                    <div class="container-wrapper">
+                        <div class="container">
+                            <div class="row">
+                                <div class="column column-md-7 column-sm-2">
+                                    <h3 class="heading-03">
+                                        РЕГИСТРИРУЙТЕ ЗАЯВКУ
+                                    </h3>
+                                </div>
+                                <div class="column column-md-5 column-sm-2">
+                                    <div class="copy-wrapper copy-02">
+                                        <p>Свяжитесь с розничной компанией или зарегистрируйтесь, чтобы всегда оставаться в курсе самых последних новостей от McLaren Automotive</p>
+                                    </div>
+                                    <div class="primary-button js-cta-button" data-component="primary-button">
+                                        <a href="https://retailerportal.mclaren.com/leadcaptureform/?campaignid=CMP-01086-M1P5R4" class="theme-outline-on-light" target="_blank">
+                                            РЕГИСТРИРУЙТЕ ЗАЯВКУ
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
     </div>
 <?php

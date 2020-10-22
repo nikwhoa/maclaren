@@ -51,6 +51,10 @@ if ( ! function_exists( 'karinaboss_template_setup' ) ) :
 		register_nav_menus(
 			array(
 				'header-menu' => esc_html__( 'Header Menu', 'karinaboss-template' ),
+				'footer-menu' => esc_html__( 'Footer Menu', 'karinaboss-template' ),
+				'footer-menu-contacts' => esc_html__( 'Footer Menu Contacts', 'karinaboss-template' ),
+				'footer-menu-social' => esc_html__( 'Footer Menu Social', 'karinaboss-template' ),
+				'footer-menu-bottom' => esc_html__( 'Footer Menu Bottom', 'karinaboss-template' ),
 			)
 		);
 
@@ -333,6 +337,57 @@ function wpdocs_codex_mclaren_posts_init() {
 
 add_action( 'init', 'wpdocs_codex_mclaren_posts_init' );
 
+/* Register a custom post type  */
+
+function wpdocs_codex_blog_posts_init() {
+	$labels = array(
+		'name'                  => _x( 'Blog', 'Post type general name', 'textdomain' ),
+		'singular_name'         => _x( 'Blog', 'Post type singular name', 'textdomain' ),
+		'menu_name'             => _x( 'Blog', 'Admin Menu text', 'textdomain' ),
+		'name_admin_bar'        => _x( 'Blog', 'Add New on Toolbar', 'textdomain' ),
+		'add_new'               => __( 'Add New', 'textdomain' ),
+		'add_new_item'          => __( 'Add New Slide', 'textdomain' ),
+		'new_item'              => __( 'New Blog Post', 'textdomain' ),
+		'edit_item'             => __( 'Edit Blog Post', 'textdomain' ),
+		'view_item'             => __( 'View Blog Post', 'textdomain' ),
+		'all_items'             => __( 'All Blog Posts', 'textdomain' ),
+		'search_items'          => __( 'Search Blog Posts', 'textdomain' ),
+		'parent_item_colon'     => __( 'Parent Blog:', 'textdomain' ),
+		'not_found'             => __( 'No Blog Posts found.', 'textdomain' ),
+		'not_found_in_trash'    => __( 'No Blog Posts found in Trash.', 'textdomain' ),
+		'featured_image'        => _x( 'Blog Posts Image', 'Overrides the “Featured Image” phrase for this post type. Added in 4.3', 'textdomain' ),
+		'set_featured_image'    => _x( 'Set image', 'Overrides the “Set featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
+		'remove_featured_image' => _x( 'Remove cover image', 'Overrides the “Remove featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
+		'use_featured_image'    => _x( 'Use as cover image', 'Overrides the “Use as featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
+		'archives'              => _x( 'Blog Posts archives', 'The post type archive label used in nav menus. Default “Post Archives”. Added in 4.4', 'textdomain' ),
+		'insert_into_item'      => _x( 'Insert into blog_posts', 'Overrides the “Insert into post”/”Insert into page” phrase (used when inserting media into a post). Added in 4.4', 'textdomain' ),
+		'uploaded_to_this_item' => _x( 'Uploaded to this blog_posts', 'Overrides the “Uploaded to this post”/”Uploaded to this page” phrase (used when viewing media attached to a post). Added in 4.4', 'textdomain' ),
+		'filter_items_list'     => _x( 'Filter blog_posts list', 'Screen reader text for the filter links heading on the post type listing screen. Default “Filter posts list”/”Filter pages list”. Added in 4.4', 'textdomain' ),
+		'items_list_navigation' => _x( 'Blog Posts list navigation', 'Screen reader text for the pagination heading on the post type listing screen. Default “Posts list navigation”/”Pages list navigation”. Added in 4.4', 'textdomain' ),
+		'items_list'            => _x( 'Blog Posts list', 'Screen reader text for the items list heading on the post type listing screen. Default “Posts list”/”Pages list”. Added in 4.4', 'textdomain' ),
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'blog_posts' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail'),
+		'menu_icon'          => 'dashicons-welcome-write-blog',
+	);
+
+	register_post_type( 'blog_posts', $args );
+}
+
+add_action( 'init', 'wpdocs_codex_blog_posts_init' );
+
 
 ## Добавляем блоки в основную колонку на страницах постов и пост. страниц
 add_action('add_meta_boxes', 'myplugin_add_custom_box');
@@ -384,3 +439,21 @@ function myplugin_save_postdata( $post_id ) {
 }
 
 
+function wpdocs_channel_nav_class( $classes, $item, $args ) {
+
+	if ( 'footer-menu' === $args->theme_location ) {
+		$classes[] = "copy-02 link-item";
+	}
+	if ( 'footer-menu-contacts' === $args->theme_location ) {
+		$classes[] = "copy-02 contact-link";
+	}
+	if ( 'footer-menu-social' === $args->theme_location ) {
+		$classes[] = "copy-02 contact-link";
+	}
+	if ( 'footer-menu-bottom' === $args->theme_location ) {
+		$classes[] = "cta footer-link";
+	}
+
+	return $classes;
+}
+add_filter( 'nav_menu_css_class' , 'wpdocs_channel_nav_class' , 10, 4 );
