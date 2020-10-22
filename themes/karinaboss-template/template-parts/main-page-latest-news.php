@@ -46,7 +46,7 @@
                                         <p><?php the_content(); ?></p>
                                     </div>
                                     <div class="cta-holder">
-                                        <div class="cta">Читать дальше</div>
+                                        <div class="cta">Читать дальше </div>
                                     </div>
                                 </a>
                             </div>
