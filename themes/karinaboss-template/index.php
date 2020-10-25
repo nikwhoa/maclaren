@@ -64,7 +64,7 @@ get_header();
 										//	                                    $number = 0;
 										if ( $slider_posts ) {
 											foreach ( $slider_posts as $post ) : setup_postdata( $post ); ?>
-                                                <a href="<?php the_permalink(); ?>"
+                                                <a href="<?php the_field('link_to_a_product'); ?>"
                                                    class="content-slide js-content-slide" target="_self">
                                                     <p class="copy-02 js-rfeveal-transition-element" style="">
 														<?php the_field( 'text_above_the_title' ); ?>
