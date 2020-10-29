@@ -432,7 +432,8 @@ get_header();
 
 
 	                                            <?php
-	                                            $featured_posts = get_field('jjjj');
+                                                /* check if a product has related products and if yes, show them */
+	                                            $featured_posts = get_field('related_products');
 	                                            if( $featured_posts ): ?>
 
 			                                            <?php foreach( $featured_posts as $post ):
@@ -466,10 +467,6 @@ get_header();
 		                                            wp_reset_postdata(); ?>
 	                                            <?php endif; ?>
 
-
-
-
-
                                         </div>
                                     </div>
                                 </div>
@@ -485,15 +482,16 @@ get_header();
                                     <div class="column column-md-12 column-lg-10 column-sm-2">
                                         <div class="downloadable-wrapper">
                                             <div class="left-content">
-                                                <p class="copy-03">Новый GT </p>
-                                                <p class="copy-02">Брошюра Продукции</p>
+                                                <p class="copy-03"><?php the_field( 'title_for_brochure' ); ?> </p>
+                                                <p class="copy-02"><?php the_field( 'sub-title_for_brochure' ); ?></p>
                                             </div>
+                                            <?php if (get_field('brochure')) : ?>
                                             <a class="download-link"
-                                               href="../content/dam/mclaren-automotive/models/new-mclaren-gt/brochures/New McLaren GT Product Brochure - EN.pdf"
+                                               href="<?php the_field( 'brochure' ); ?>"
                                                data-id="s040_downloadables-556886101-New GT "
                                                data-type="application/pdf" data-category="Product Brochure"
                                                data-filename="New McLaren GT Product Brochure - EN.pdf">
-                                                <p class="copy-03">4 MB</p>
+                                                <p class="copy-03"><?php the_field( 'file_size' ); ?></p>
                                                 <p class="cta">Загрузить</p>
                                                 <div class="icon-wrapper">
                                                     <span class="icon  download-icon" data-component="icon"
@@ -508,6 +506,7 @@ get_header();
                                                                     fill="#fff" fill-rule="evenodd"></path></svg></span>
                                                 </div>
                                             </a>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
                                     <div class="column column-spacer"></div>
@@ -522,16 +521,16 @@ get_header();
                                 <picture class="responsive-image js-image-reveal" data-component="responsive-image"
                                          style="transform: matrix(1, 0, 0, 1, 0, 40); visibility: hidden; opacity: 0;">
                                     <source media="(max-width: 767px)" class="js-small-image"
-                                            srcset="/content/dam/mclaren-automotive/configurator/hero/New%20GT.png">
-                                    <img src="../content/dam/mclaren-automotive/configurator/hero/New GT.png"
-                                         alt="New GT Configurator" class="js-normal-image  fit-contain">
+                                            srcset="<?php the_field( 'photo_for_the_row' ); ?>">
+                                    <img src="<?php the_field( 'photo_for_the_row' ); ?>"
+                                         alt="" class="js-normal-image  fit-contain">
                                 </picture>
                             </div>
                             <div class="container">
                                 <div class="row">
                                     <div class="column column-sm-2 column-md-12 column-lg-12">
                                         <h2 class="heading-03">
-                                            пусть он станет вашим</h2>
+                                            <?php the_field( 'title_for_the_row' ); ?></h2>
                                     </div>
                                 </div>
                             </div>
@@ -539,10 +538,18 @@ get_header();
                                 <div class="row">
                                     <div class="column column-sm-2 column-md-12 column-lg-12 primary-button-column">
                                         <div class="primary-button " data-component="primary-button">
-                                            <a href="http://configurator.mclaren.com/model/gt"
+                                            <?php
+                                            /* setup link */
+                                            $link = get_field( 'link_for_the_row' );
+                                            $link_url = $link['url'];
+                                            $link_title = $link['title'];
+                                            if ($link) :
+                                            ?>
+                                            <a href="<?php echo esc_url( $link_url ); ?>"
                                                class="theme-outline-on-light" target="_blank">
-                                                конфигурируйте ваш Новый GT
+	                                            <?php echo esc_html( $link_title ); ?>
                                             </a>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
                                 </div>
@@ -568,7 +575,7 @@ get_header();
                                                     Automotive</p>
                                             </div>
                                             <div class="primary-button js-cta-button" data-component="primary-button">
-                                                <a href="https://retailerportal.mclaren.com/leadcaptureform/?campaignid=CMP-01090-J9V8L2"
+                                                <a href="#popmake-169"
                                                    class="theme-outline-on-light" target="_blank">
                                                     Регистрируйте Заявку
                                                 </a>
