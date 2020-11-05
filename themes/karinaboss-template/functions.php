@@ -150,6 +150,7 @@ function karinaboss_template_scripts() {
 	/* main template styles */
 //	wp_enqueue_style( 'karinaboss-template-style', get_template_directory_uri().'/assets/css/style.min.css', array(), _S_VERSION );
 	wp_enqueue_style( 'karinaboss-template-style', get_template_directory_uri().'/assets/css/clientlib-site.min.css', array(), _S_VERSION );
+	wp_enqueue_style( 'karinaboss-template-second-style', get_template_directory_uri().'/assets/css/style.min.css', array(), _S_VERSION );
 
 	/* template styles */
 //	wp_enqueue_style( 'karinaboss-header-style', get_template_directory_uri().'/assets/css/header.min.css', array(), _S_VERSION );

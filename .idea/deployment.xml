@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="mclaren" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="mclaren">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/wp-content" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/wp-content/backups-dup-lite" />
+            <excludedPath path="/wp-content/sources" />
+            <excludedPath path="/wp-content/uploads" />
+            <excludedPath path="/wp-content/index.php" />
+            <excludedPath path="/wp-content/mu-plugins" />
+            <excludedPath path="/wp-content/upgrade" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

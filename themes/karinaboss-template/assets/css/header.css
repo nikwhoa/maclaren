@@ -1,0 +1,208 @@
+/*
+
+.n010-main-navigation {
+  position: fixed;
+  top: 0;
+  height: 6rem;
+  z-index: 5;
+  .main-menu-container {
+    height: 100%;
+  }
+  .navigation-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .left-navigation-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+  .logo-wrapper {
+    height: 2rem;
+    width: 13.5rem;
+    z-index: 9;
+    position: relative;
+    top: 2rem;
+    .icon {
+      height: 100%;
+      width: 100%;
+    }
+    @media (min-width: 768px) {
+      z-index: 5;
+      margin-right: 4rem;
+    }
+    @media (min-width: 1280px) {
+      height: 4rem;
+      width: 17.5rem;
+      top: 1.3rem;
+    }
+  }
+  .model-categories-wrapper {
+    position: absolute;
+    height: 6rem;
+    width: 100%;
+    padding: 0 2rem;
+    left: 0;
+    top: 6rem;
+    background-color: #000;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 5;
+  @media (min-width: 768px) {
+    padding: 0 8rem;
+  }
+  @media (min-width: 1280px) {
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 0;
+    left: auto;
+    top: 3.1rem;
+    white-space: normal;
+    background-color: transparent;
+  }
+  }
+  .model-categories {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    height: 6rem;
+    position: relative;
+  @media (min-width: 1280px) {
+
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+  }
+  }
+  .model-category-button {
+    -webkit-transition: color .3s ease;
+    -o-transition: color .3s ease;
+    transition: color .3s ease;
+    margin-top: 0;
+    margin-right: 2rem;
+    .arrow-icon {
+      display: none;
+      @media (min-width: 1280px) {
+        display: block;
+      }
+    }
+    @media (min-width: 1280px) {
+      opacity: .75;
+      -webkit-transition: opacity .2s ease;
+      -o-transition: .2s opacity ease;
+      transition: opacity .2s ease;
+    }
+  }
+  .model-categories-button, .model-category-button {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+  }
+  .arrow-icon {
+    height: .6rem;
+    width: 1.2rem;
+    margin-left: 1rem;
+    -webkit-transition: -webkit-transform .3s ease;
+    transition: -webkit-transform .3s ease;
+    -o-transition: transform .3s ease;
+    transition: transform .3s ease;
+    transition: transform .3s ease,-webkit-transform .3s ease;
+  }
+
+
+  .model-categories-button, .n010-main-navigation .model-category-button {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+  }
+  .model-categories-button {
+    position: relative;
+    top: 1.7rem;
+    z-index: 5;
+    @media (min-width: 1280px) {
+      display: none;
+    }
+  }
+  .navigation-items {
+    @media (min-width: 768px) {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+  }
+  .retailer-link {
+    display: none;
+    z-index: 9;
+    @media (min-width: 768px) {
+      padding: 0 1.1rem;
+      border: 1px solid #fff;
+      color: #fff;
+      opacity: .75;
+      -webkit-transition: opacity .2s ease;
+      -o-transition: .2s opacity ease;
+      transition: opacity .2s ease;
+      position: relative;
+      margin-right: 2rem;
+      top: 2.5rem;
+      height: 3rem;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+    @media (min-width: 1280px) {
+      top: 3.1rem;
+    }
+  }
+  .side-menu-toggler {
+    height: 4rem;
+    width: 2.4rem;
+    position: relative;
+    top: 1.3rem;
+    display: block;
+    z-index: 9;
+    .menu-tooltip {
+      display: none;
+    }
+    @media (min-width: 1280px) {
+      top: 2rem;
+      position: relative;
+    }
+  }
+  .hamburger-icon {
+    height: 1.6rem;
+    width: 2.4rem;
+  }
+  .close-icon {
+    height: 2rem;
+    width: 2.4rem;
+    display: none;
+  }
+  !* end of the main-navigation classes *!
+  @media (min-width: 1280px) {
+    height: 8rem;
+  }
+}*/
+/*# sourceMappingURL=header.css.map */

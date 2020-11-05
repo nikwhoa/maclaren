@@ -7,7 +7,13 @@
 *.iml
 out
 gen
-!info.txt
-gb-en
-etc.clientlibs
-.gitignore
+plugins/advanced-custom-fields/
+plugins/akeebabackupwp/
+plugins/contact-form-7-dynamic-text-extension/
+plugins/contact-form-7/
+plugins/cyr2lat/
+plugins/duplicate-page/
+plugins/duplicator/
+plugins/popup-maker/
+plugins/query-monitor/
+plugins/wordpress-seo/
